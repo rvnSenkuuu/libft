@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 14:58:13 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 23:03:17 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/16 14:02:05 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdint.h>
 # include <stdarg.h>
 # include <unistd.h>
-# define ULL_MAX 1844674407370955161
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
@@ -36,6 +36,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_isspace(int c);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -88,5 +89,13 @@ int		ft_pf_putnbr_uint(unsigned int n);
 int		ft_pf_putnbr_hex(unsigned long long int n, char format);
 int		ft_pf_putaddr(unsigned long long int ptr);
 int		ft_pf_strlen(char *s);
+
+int		ft_dprintf(int fd, const char *format, ...);
+int		ft_dpf_putchar(int fd, char c);
+int		ft_dpf_putstr(int fd, char *s);
+int		ft_dpf_putnbr(int fd, int n);
+int		ft_dpf_putnbr_uint(int fd, unsigned int n);
+int		ft_dpf_putnbr_hex(int fd, unsigned long long int n, char format);
+int		ft_dpf_putaddr(int fd, unsigned long long int ptr);
 
 #endif

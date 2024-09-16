@@ -6,10 +6,11 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 01:31:51 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 22:36:09 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/16 13:52:38 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../../includes/libft.h"
+
+#include "libft.h"
 
 int	ft_pf_putnbr_uint(unsigned int n)
 {

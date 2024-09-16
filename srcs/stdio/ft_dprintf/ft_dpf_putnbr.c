@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_dpf_putnbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 01:17:12 by tkara2            #+#    #+#             */
-/*   Updated: 2024/05/29 18:04:45 by tkara2           ###   ########.fr       */
+/*   Created: 2024/09/16 13:46:53 by tkara2            #+#    #+#             */
+/*   Updated: 2024/09/16 13:54:48 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../include/ft_printf.h"
 
-int	ft_putchar(char c)
+#include "libft.h"
+
+int	ft_dpf_putnbr(int fd, int n)
 {
-	write(STDOUT_FILENO, &c, sizeof(char));
-	return (1);
+	unsigned int	nb;
+	int				len;
+
+	len = 0;
+	if (n < 0)
+	{
+		len += ft_dpf_putchar(fd, '-');
+		n = -n;
+	}
+	nb = n;
+	if (nb > 9)
+		len += ft_dpf_putnbr(fd, nb / 10);
+	len += ft_dpf_putchar(fd, (nb % 10) + '0');
+	return (len);
 }

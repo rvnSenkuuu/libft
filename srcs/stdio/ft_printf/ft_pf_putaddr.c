@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pf_putaddr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkara2 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:10:53 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 22:34:14 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/16 14:01:22 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../../includes/libft.h"
+
+#include "libft.h"
 
 int	ft_pf_putaddr(unsigned long long int ptr)
 {

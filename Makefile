@@ -6,7 +6,7 @@
 #    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 17:59:47 by tkara2            #+#    #+#              #
-#    Updated: 2024/06/21 00:05:16 by tkara2           ###   ########.fr        #
+#    Updated: 2024/09/16 14:02:40 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/ctype/ft_isascii.c \
 							srcs/ctype/ft_tolower.c \
 							srcs/ctype/ft_toupper.c \
+							srcs/ctype/ft_isspace.c \
 							srcs/string/ft_strlen.c \
 							srcs/string/ft_strlcpy.c \
 							srcs/string/ft_strlcat.c \
@@ -46,6 +47,13 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/stdio/ft_printf/ft_pf_putnbr_hex.c \
 							srcs/stdio/ft_printf/ft_pf_putaddr.c \
 							srcs/stdio/ft_printf/ft_pf_strlen.c \
+							srcs/stdio/ft_dprintf/ft_dprintf.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putchar.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putstr.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putnbr.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putnbr_uint.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putnbr_hex.c \
+							srcs/stdio/ft_dprintf/ft_dpf_putaddr.c \
 							srcs/memory/ft_bzero.c \
 							srcs/memory/ft_memset.c \
 							srcs/memory/ft_memcpy.c \
@@ -71,7 +79,7 @@ INCLUDE					=	libft.h
 
 NAME					=	libft.a
 CC						=	cc
-CFLAGS					=	-Wall -Werror -Wextra
+CFLAGS					=	-Wall -Werror -Wextra -Iincludes
 RM						=	rm -rf
 AR						=	ar rcs
 
@@ -99,7 +107,8 @@ fclean:	clean
 	${RM} ${NAME}
 	@echo "[DONE] Libft full deletion.."
 
-re:	fclean all
+re:	fclean
+	make all
 	@echo "[DONE] Libft Recompiled.."
 
 .PHONY: all clean fclean re

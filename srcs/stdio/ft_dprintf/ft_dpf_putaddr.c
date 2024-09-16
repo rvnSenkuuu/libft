@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_dpf_putaddr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 01:19:56 by tkara2            #+#    #+#             */
-/*   Updated: 2024/05/29 18:06:20 by tkara2           ###   ########.fr       */
+/*   Created: 2024/09/16 14:01:00 by tkara2            #+#    #+#             */
+/*   Updated: 2024/09/16 14:03:07 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../include/ft_printf.h"
 
-int	ft_strlen(char *s)
+#include "libft.h"
+
+int	ft_dpf_putaddr(int fd, unsigned long long int ptr)
 {
-	int	i;
+	int		len;
+	char	*base;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	base = "0123456789abcdef";
+	len = 0;
+	if (!ptr)
+		return (ft_dpf_putstr(fd, "(nil)"), 5);
+	if (ptr >= 16)
+		len += ft_dpf_putaddr(fd, ptr / 16);
+	len += ft_dpf_putchar(fd, base[ptr % 16]);
+	return (len);
 }

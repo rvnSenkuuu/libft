@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
+/*   ft_dpf_putchar.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 01:37:32 by tkara2            #+#    #+#             */
-/*   Updated: 2024/05/29 18:05:53 by tkara2           ###   ########.fr       */
+/*   Created: 2024/09/16 13:38:26 by tkara2            #+#    #+#             */
+/*   Updated: 2024/09/16 13:39:37 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../include/ft_printf.h"
 
-int	ft_putnbr_hex(unsigned long long int n, char format)
+#include "libft.h"
+
+int	ft_dpf_putchar(int fd, char c)
 {
-	int		len;
-	char	*base;
-
-	len = 0;
-	if (format == 'X')
-		base = "0123456789ABCDEF";
-	else
-		base = "0123456789abcdef";
-	if (n >= 16)
-		len += ft_putnbr_hex(n / 16, format);
-	len += ft_putchar(base[n % 16]);
-	return (len);
+	return (write(fd, &c, sizeof(char)));
 }

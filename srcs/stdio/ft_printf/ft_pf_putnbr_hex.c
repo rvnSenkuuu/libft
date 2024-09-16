@@ -6,10 +6,11 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 01:37:32 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 22:35:42 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/16 13:58:20 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../../includes/libft.h"
+
+#include "libft.h"
 
 int	ft_pf_putnbr_hex(unsigned long long int n, char format)
 {
