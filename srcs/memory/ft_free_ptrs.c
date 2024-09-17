@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_doubletab.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkara2 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tkara2 <tkara2@student.42.ft>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:35:29 by tkara2            #+#    #+#             */
-/*   Updated: 2024/05/23 16:38:24 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/18 00:26:55 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../includes/libft.h"
 
-void	ft_free_doubletab(char **tab)
+#include "libft.h"
+
+void	ft_free_ptrs(void **ptr)
 {
 	size_t	i;
 
 	i = 0;
-	while (tab && tab[i])
+	while (ptr && ptr[i])
 	{
-		(free(tab[i]), tab[i] = NULL);
+		(free(ptr[i]), ptr[i] = NULL);
 		i++;
 	}
-	(free(tab), tab = NULL);
+	(free(ptr), ptr = NULL);
 }

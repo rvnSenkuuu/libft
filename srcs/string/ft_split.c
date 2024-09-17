@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tkara2 <tkara2@student.42.ft>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 23:38:20 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 23:39:16 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/09/18 00:26:30 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../includes/libft.h"
+
+#include "libft.h"
 
 static size_t	ft_issep(char c, char sep)
 {
@@ -79,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		{
 			output[j] = ft_strdupsep(&s[i], c);
 			if (!output[j])
-				return (ft_free_doubletab(output), NULL);
+				return (ft_free_ptrs((void **)output), NULL);
 			i += ft_strlen(output[j]);
 			j++;
 		}

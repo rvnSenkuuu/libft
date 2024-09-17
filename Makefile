@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
+#    By: tkara2 <tkara2@student.42.ft>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 17:59:47 by tkara2            #+#    #+#              #
-#    Updated: 2024/09/16 14:02:40 by tkara2           ###   ########.fr        #
+#    Updated: 2024/09/18 00:27:28 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/memory/ft_memcmp.c \
 							srcs/memory/ft_memmove.c \
 							srcs/memory/ft_calloc.c \
-							srcs/memory/ft_free_doubletab.c \
+							srcs/memory/ft_free_ptrs.c \
 							srcs/list/ft_lstnew.c \
 							srcs/list/ft_lstadd_front.c \
 							srcs/list/ft_lstadd_back.c \
