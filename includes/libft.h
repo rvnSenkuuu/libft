@@ -83,16 +83,15 @@ int		ft_lstsize(t_list *lst);
 
 int		ft_printf(const char *format, ...);
 int		ft_pf_putchar(char c);
-int		ft_pf_putstr(char *s);
+int		ft_pf_putstr(const char *s);
 int		ft_pf_putnbr(int n);
 int		ft_pf_putnbr_uint(unsigned int n);
 int		ft_pf_putnbr_hex(unsigned long long int n, char format);
 int		ft_pf_putaddr(unsigned long long int ptr);
-int		ft_pf_strlen(char *s);
 
 int		ft_dprintf(int fd, const char *format, ...);
 int		ft_dpf_putchar(int fd, char c);
-int		ft_dpf_putstr(int fd, char *s);
+int		ft_dpf_putstr(int fd, const char *s);
 int		ft_dpf_putnbr(int fd, int n);
 int		ft_dpf_putnbr_uint(int fd, unsigned int n);
 int		ft_dpf_putnbr_hex(int fd, unsigned long long int n, char format);

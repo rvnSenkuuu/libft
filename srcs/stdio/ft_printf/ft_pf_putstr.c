@@ -12,10 +12,9 @@
 
 #include "libft.h"
 
-int	ft_pf_putstr(char *s)
+int	ft_pf_putstr(const char *s)
 {
 	if (!s)
 		return (write(STDOUT_FILENO, "(null)", 6));
-	write(STDOUT_FILENO, s, ft_pf_strlen(s));
-	return (ft_pf_strlen(s));
+	return (write(STDOUT_FILENO, s, ft_strlen(s)));
 }

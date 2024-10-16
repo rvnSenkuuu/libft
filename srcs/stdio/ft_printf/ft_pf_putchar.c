@@ -14,6 +14,5 @@
 
 int	ft_pf_putchar(char c)
 {
-	write(STDOUT_FILENO, &c, sizeof(char));
-	return (1);
+	return (write(STDOUT_FILENO, &c, sizeof(char)));
 }

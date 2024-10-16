@@ -46,7 +46,6 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/stdio/ft_printf/ft_pf_putnbr_uint.c \
 							srcs/stdio/ft_printf/ft_pf_putnbr_hex.c \
 							srcs/stdio/ft_printf/ft_pf_putaddr.c \
-							srcs/stdio/ft_printf/ft_pf_strlen.c \
 							srcs/stdio/ft_dprintf/ft_dprintf.c \
 							srcs/stdio/ft_dprintf/ft_dpf_putchar.c \
 							srcs/stdio/ft_dprintf/ft_dpf_putstr.c \

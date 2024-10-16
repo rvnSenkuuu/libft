@@ -21,7 +21,7 @@ static int	ft_dpf_format_checker(int fd, char format, va_list args)
 	if (format == 'c')
 		count += ft_dpf_putchar(fd, va_arg(args, int));
 	else if (format == 's')
-		count += ft_dpf_putstr(fd, va_arg(args, char *));
+		count += ft_dpf_putstr(fd, va_arg(args, const char *));
 	else if (format == 'd' || format == 'i')
 		count += ft_dpf_putnbr(fd, va_arg(args, int));
 	else if (format == 'u')
@@ -50,6 +50,7 @@ int	ft_dprintf(int fd, const char *format, ...)
 		return (-1);
 	i = 0;
 	return_value = 0;
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')

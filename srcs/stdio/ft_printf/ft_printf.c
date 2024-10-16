@@ -20,7 +20,7 @@ static int	ft_format_checker(char format, va_list args)
 	if (format == 'c')
 		count += ft_pf_putchar(va_arg(args, int));
 	else if (format == 's')
-		count += ft_pf_putstr(va_arg(args, char *));
+		count += ft_pf_putstr(va_arg(args, const char *));
 	else if (format == 'd' || format == 'i')
 		count += ft_pf_putnbr(va_arg(args, int));
 	else if (format == 'u')
