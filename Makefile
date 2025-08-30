@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tkara2 <tkara2@student.42.ft>              +#+  +:+       +#+         #
+#    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 17:59:47 by tkara2            #+#    #+#              #
-#    Updated: 2024/09/18 00:27:28 by tkara2           ###   ########.fr        #
+#    Updated: 2025/08/30 12:25:36 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/string/ft_strlen.c \
 							srcs/string/ft_strlcpy.c \
 							srcs/string/ft_strlcat.c \
+							srcs/string/ft_strcmp.c \
 							srcs/string/ft_strncmp.c \
 							srcs/string/ft_strchr.c \
 							srcs/string/ft_strrchr.c \
